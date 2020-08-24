@@ -33,6 +33,7 @@ class MoviesTable extends Component {
 			),
 		},
 	];
+
 	render() {
 		const { moviesSelected, onSort, sortColumn } = this.props;
 		return (

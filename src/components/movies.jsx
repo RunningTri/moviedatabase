@@ -6,6 +6,7 @@ import ListGroup from "./common/listGroup";
 import { paginate } from "../utils/paginate";
 import MoviesTable from "./moviesTable";
 import _ from "lodash";
+import { Link } from "react-router-dom";
 
 class Movies extends Component {
 	state = {
@@ -91,6 +92,11 @@ class Movies extends Component {
 						onItemSelect={this.handleGenreSelect}
 						selectedItem={this.state.selectedGenre}
 					/>
+					<div className="row align-items-center justify-content-center">
+						<Link to="/movies/new" className="btn btn-primary mt-3">
+							New Movie
+						</Link>
+					</div>
 				</div>
 				<div className="col">
 					<p>Showing {amountMovies} movies in the database.</p>
